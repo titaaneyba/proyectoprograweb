@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hogwarts & Books - Dark Academy</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=MedievalSharp&family=UnifrakturMaguntia&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Archivo CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Encabezado con menú de navegación fijo -->
+  <header>
+    <div class="container header-content">
+      <!-- Botón para desplegar/ocultar la barra lateral (a la izquierda) -->
+      <div class="toggle-sidebar">
+        <button id="toggleSidebarBtn">
+          <div class="bars-container">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <span class="info-text">Mas info</span>
+        </button>
+      </div>
+
+      <!-- Logo Hogwarts -->
+      <div class="logo-container">
+        <img src="https://mystickermania.com/cdn/stickers/movies-and-series/hogwarts-logo-256x256.png?t=09102020" alt="Logo Hogwarts" class="hogwarts-logo" />
+        <h1>Hogwarts & Books</h1>
+      </div>
+
+      <!-- Menú de navegación -->
+      <nav>
+        <ul>
+          <li>
+            <img src="https://th.bing.com/th/id/R.949bcc9d07186366acede8d82db5522f?rik=A%2fFe4dkZJdCAZg&pid=ImgRaw&r=0" alt="Gryffindor" class="house-icon"/>
+            <a href="#libros">Libros</a>
+          </li>
+          <li>
+            <img src="https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol.png" alt="Ravenclaw" class="house-icon"/>
+            <a href="#contacto">Contáctanos</a>
+          </li>
+          <!-- Buscador -->
+          <li>
+            <img src="https://th.bing.com/th/id/R.2abc4c00c8a58d759b752abf54bfd14b?rik=h7SrxwN5n9%2fwFw&riu=http%3a%2f%2fvignette1.wikia.nocookie.net%2fharryalbuspotter%2fimages%2f4%2f45%2fSlytherin_by_melisarodriguez-d47ly0k.png%2frevision%2flatest%3fcb%3d20140621170234&ehk=HVLZP9tOwtDLF8%2bN6Oz2wMPdehMFrjiOohCOCduWeew%3d&risl=&pid=ImgRaw&r=0" alt="Slytherin" class="house-icon"/>
+            <form id="searchForm" onsubmit="return false;" class="search-form">
+              <input type="text" id="searchInput" placeholder="Buscar libro...">
+              <button type="submit" class="btn">Buscar</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Barra lateral (indicadores, sobre nosotros, ubicación) -->
+  <aside id="sidebar">
+    <!-- Título "Nosotros" con otra fuente medieval, color rojo oscuro, fondo = #2c1b0f -->
+    <div class="sidebar-header">
+      <h2>Nosotros</h2>
+    </div>
+
+    <div class="sidebar-section">
+      <h3 class="section-title">Te ofrecemos: ⚡</h3>
+      <div class="stats">
+        <div class="stats-item">Libros: <strong>40</strong></div>
+        <div class="stats-item">Categorías: <strong>39</strong></div>
+        <div class="stats-item">Usuarios: <strong>40</strong></div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3 class="section-title">Sobre Nosotros 🏰</h3>
+      <p>
+        Somos un grupo de magos y brujas amantes de la lectura, fundamos
+        Hogwarts & Books en el año 2025. Nuestra visión es convertir cada lectura
+        en una experiencia mágica.
+      </p>
+    </div>
+
+    <div class="sidebar-section">
+      <h3 class="section-title">Ubicación 🧭</h3>
+      <p>
+        Nos encontramos en la 3era casa a la izquierda de la entrada en
+        Diagon Alley, mundo mágico.
+      </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.4707422700986!2d-8.614857084571485!3d41.14654601925413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2464e8041e68d5%3A0xeef89d4df86a4df3!2sLivraria%20Lello!5e0!3m2!1ses-419!2sbo!4v1679972654217!5m2!1ses-419!2sbo"
+          width="100%"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Sección Hero con imagen de fondo difuminada -->
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2>Bienvenidos a Hogwarts &amp; Books 🦉</h2>
+        <p>Descubre un mundo mágico 🪄 de literatura y conocimiento 📚</p>
+        <a href="#registro" class="btn">Regístrate ahora</a>
+      </div>
+    </section>
+
+    <!-- Sección Nuestras Instalaciones -->
+    <section id="instalaciones">
+      <div class="container">
+        <h2>Nuestras Instalaciones</h2>
+        <p>
+          Conoce cada rincón de nuestro espacio mágico.  
+          <a href="#contacto" class="link-resaltar">Ir a Contáctanos</a>
+        </p>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="https://i.pinimg.com/736x/24/9d/05/249d057fd056ef3d333fd7d5bd1a0ba5.jpg" alt="Fachada de la biblioteca" />
+            <figcaption>Fachada</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://i.pinimg.com/736x/3c/94/79/3c947954d32ebc2c4c363dd189afe616.jpg" alt="Sala de lectura" />
+            <figcaption>Sala de lectura</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://i.pinimg.com/originals/31/c9/7b/31c97bbe61b83769aea2dfde950565e3.jpg" alt="Sala de estudio" />
+            <figcaption>Sala de estudio</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://th.bing.com/th/id/OIP.PuBiLOyUR5YkBMrt-bRPYwHaEO?rs=1&pid=ImgDetMain" alt="Estantería de libros" />
+            <figcaption>Estantería</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.nightcafe.studio/jobs/aOyviAyzudKvtz1KOfS0/aOyviAyzudKvtz1KOfS0--1--8kky4.jpg?tr=w-1600,c-at_max" alt="Recepción" />
+            <figcaption>Recepción</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://th.bing.com/th/id/R.c2f0c155124b0c183c63b8fc85a87d9c?rik=39xeICakLr67mQ&riu=http%3a%2f%2fwww.chinazhaolong.com%2fd%2ffile%2f2019-01-28%2f5272c898b22e85a30a257de5e02b3317.jpg&ehk=EwhXGurlUNxflw7Z7Hi7NdM6736%2fiBi2Ew34Od9UK6o%3d&risl=&pid=ImgRaw&r=0" alt="Pasillos" />
+            <figcaption>Pasillos</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://th.bing.com/th/id/R.e67963c83a7a73f01ef758f28df9c615?rik=Q%2bH9khoy0K%2bGmA&pid=ImgRaw&r=0" alt="Baños" />
+            <figcaption>Baños</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://vignette.wikia.nocookie.net/harrypotter/images/c/c6/Cour_de_la_Tour.jpg/revision/latest?cb=20140730141322&path-prefix=fr" alt="Jardines" />
+            <figcaption>Jardines</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>       
+
+    <!-- Sección de Libros -->
+    <section id="libros">
+      <div class="container">
+        <h2>Nuestros Libros</h2>
+        <!-- Encabezado para resultados de búsqueda -->
+        <div id="searchResultsHeader" class="search-results-header"></div>
+        <div class="book-grid" id="bookGrid">
+          <!-- Se muestran todos los libros; JavaScript se encargará de revelar solo 4 al inicio y luego 8 en cada click -->
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.54d54b9e47b368c2dcbf822968528a1d?rik=ZWfmTXb8pPqdxw&pid=ImgRaw&r=0" alt="La Casa de los Espíritus">
+            <h3>La Casa de los Espíritus</h3>
+            <p>Una saga familiar con elementos sobrenaturales en Chile.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.938c16d580f65d466de44d9f2ec98732?rik=kqLcyYNhyB9XcQ&pid=ImgRaw&r=0" alt="Cien Años de Soledad">
+            <h3>Cien Años de Soledad</h3>
+            <p>La historia de la familia Buendía en Macondo.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.p2Qht0iMCaSgQb3wbzHukAHaKN?rs=1&pid=ImgDetMain" alt="Don Quijote de la Mancha">
+            <h3>Don Quijote de la Mancha</h3>
+            <p>Las aventuras del hidalgo que sueña con la caballería andante.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.AH51t3XXwwUHzBcgAnRyDQHaLY?rs=1&pid=ImgDetMain" alt="El Amor en los Tiempos del Cólera">
+            <h3>El Amor en los Tiempos del Cólera</h3>
+            <p>Un amor duradero a través de las décadas en el Caribe.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP._idAd91_g_NrtKCHOU3NpQAAAA?rs=1&pid=ImgDetMain" alt="Pedro Páramo">
+            <h3>Pedro Páramo</h3>
+            <p>Un joven busca a su padre en un pueblo fantasma mexicano.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.84d2ad6787f0eab3d2c35097777f1d41?rik=s5tX1clebD77gQ&pid=ImgRaw&r=0" alt="Rayuela">
+            <h3>Rayuela</h3>
+            <p>Novela experimental que invita a una lectura no lineal.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://http2.mlstatic.com/la-ciudad-y-los-perros-por-mario-vargas-llosa-D_NQ_NP_3131-MLM4009986602_032013-F.jpg" alt="La Ciudad y los Perros">
+            <h3>La Ciudad y los Perros</h3>
+            <p>La vida en un colegio militar en el Perú.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.Glz8oV_znyNCgusRn9nuhAHaNk?rs=1&pid=ImgDetMain" alt="La Fiesta del Chivo">
+            <h3>La Fiesta del Chivo</h3>
+            <p>La dictadura de Trujillo en República Dominicana.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.84b49286ba4bd49d2892375a8ca6d3b9?rik=8DdzJV%2bhhSlZSQ&riu=http%3a%2f%2fportafoliodeliteratura.bigpress.net%2fimages%2fshowid2%2f2812096%3fw%3d623%26zc%3d4&ehk=DOuv6f77%2bnGOVzVBZqNgB6CnSxdAj6R%2fYizvRmlkGs8%3d&risl=&pid=ImgRaw&r=0" alt="El Túnel">
+            <h3>El Túnel</h3>
+            <p>Un pintor obsesionado con una mujer y la locura.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.758287124d9f6d2391f1ab5bc4439ff2?rik=ZnrYJ7mAc8AajQ&riu=http%3a%2f%2flaplumayellibro.com%2fwp-content%2fuploads%2f2017%2f03%2fLibro-ficciones-de-Jorge-Luis-Borges.jpg&ehk=jNbNZ30RZSpGrQKA7ichPNeVj4NDve56X3znWg%2fz84c%3d&risl=&pid=ImgRaw&r=0" alt="Ficciones">
+            <h3>Ficciones</h3>
+            <p>Relatos que exploran laberintos metafísicos e infinitos.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/713nEf55PkL.SL1500.jpg" alt="El Principito">
+            <h3>El Principito</h3>
+            <p>Un niño de otro planeta descubre la naturaleza humana.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg" alt="1984">
+            <h3>1984</h3>
+            <p>Distopía sobre un estado totalitario y la manipulación.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.c71f4e8aec2d03b0ad7834c89846b50d?rik=yr9NbChLTGEzsA&pid=ImgRaw&r=0" alt="Orgullo y Prejuicio">
+            <h3>Orgullo y Prejuicio</h3>
+            <p>La historia de las hermanas Bennet en la Inglaterra rural.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://assets-global.website-files.com/6034d7d1f3e0f52c50b2adee/6254541d8ae4df16d4e69bc8_6034d7d1f3e0f54529b2b1a1_Crimen-y-castigo-fiodor-dostoyevski-editorial-alma.jpeg" alt="Crimen y Castigo">
+            <h3>Crimen y Castigo</h3>
+            <p>Un estudiante lida con la culpa tras cometer un crimen.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/R.bfae76717b0269eeb79b473202a0c47f?rik=AD6SgLhBk9YufA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-dZTo7vFU5ow%2fVgBoP_cpkgI%2fAAAAAAAAE2g%2fF1BlE189YuQ%2fs1600%2fmadame-bovary.jpg&ehk=JPl4eHVX08x5Tgr%2ffPp4KgNO6vMPfdcJhYyUKwXO%2bhw%3d&risl=&pid=ImgRaw&r=0" alt="Madame Bovary">
+            <h3>Madame Bovary</h3>
+            <p>La insatisfacción de una mujer casada en Francia rural.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.i7Co-_uepnqacgo9X7Lp2wHaMI?rs=1&pid=ImgDetMain" alt="La Metamorfosis">
+            <h3>La Metamorfosis</h3>
+            <p>Un hombre despierta convertido en insecto.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://pics.filmaffinity.com/El_nombre_de_la_rosa-932325619-large.jpg" alt="El Nombre de la Rosa">
+            <h3>El Nombre de la Rosa</h3>
+            <p>Un misterio en una abadía medieval.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.c6lMjK5WW7B5coR9RDHUEwHaJ9?rs=1&pid=ImgDetMain" alt="Las Mil y Una Noches">
+            <h3>Las Mil y Una Noches</h3>
+            <p>Cuentos orientales llenos de magia e intriga.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.vVvlRPaIUFhjugjPJmjiFQHaLF?rs=1&pid=ImgDetMain" alt="El Señor de los Anillos: La Comunidad del Anillo">
+            <h3>El Señor de los Anillos: La Comunidad del Anillo</h3>
+            <p>Héroes buscan destruir el Anillo Único en la Tierra Media.</p>
+          </div>
+          <div class="book-card">
+            <img src="https://www.estudioenescarlata.com/media/img/portadas/_visd_0001JPG01O5Z.jpg" alt="El Hobbit">
+            <h3>El Hobbit</h3>
+            <p>Bilbo Bolsón se embarca en una aventura con enanos.</p>
+          </div>
+        </div>
+        <!-- Botón para mostrar más libros -->
+        <div class="mostrar-mas-container">
+          <button id="mostrarMasBtn" class="btn">Mostrar más</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Registro de Usuarios -->
+    <section id="registro">
+      <div class="container">
+        <h2>Registro de Usuarios</h2>
+        <form action="registro.php" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+          </div>
+          <div class="form-group">
+            <label for="ci">Cédula de Identidad:</label>
+            <input type="text" id="ci" name="ci" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="form-group">
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio" name="domicilio" required>
+          </div>
+          <button type="submit" class="btn">Registrarse</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sección "Contáctanos" -->
+    <section id="contacto">
+      <div class="container">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes alguna duda o sugerencia? ¡Envíanos un mensaje!</p>
+        <form action="contacto.php" method="POST">
+          <div class="form-group">
+            <label for="nombreContacto">Tu nombre:</label>
+            <input type="text" id="nombreContacto" name="nombreContacto" required>
+          </div>
+          <div class="form-group">
+            <label for="emailContacto">Tu correo electrónico:</label>
+            <input type="email" id="emailContacto" name="emailContacto" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Hogwarts &amp; Books. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para "Mostrar más", "Buscar libro" y para desplegar/ocultar la barra lateral -->
+  <script>
+    // Función para normalizar cadenas: quita acentos y convierte a minúsculas
+    function normalizeString(str) {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Lógica para mostrar libros en tandas
+      const cards = document.querySelectorAll('#bookGrid .book-card');
+      const mostrarMasBtn = document.getElementById('mostrarMasBtn');
+      const searchResultsHeader = document.getElementById('searchResultsHeader');
+      let currentVisible = 4; // Solo se muestran 4 al inicio
+
+      // Ocultar desde el quinto en adelante
+      cards.forEach((card, index) => {
+        if (index >= currentVisible) {
+          card.style.display = 'none';
+        }
+      });
+
+      mostrarMasBtn.addEventListener('click', function() {
+        const nextLimit = currentVisible + 8; // Cada click muestra 8 más
+        for(let i = currentVisible; i < nextLimit && i < cards.length; i++){
+          cards[i].style.display = 'block';
+        }
+        currentVisible += 8;
+        if(currentVisible >= cards.length) {
+          mostrarMasBtn.style.display = 'none';
+        }
+      });
+
+      // Lógica para buscar libro por título con normalización
+      const searchForm = document.getElementById('searchForm');
+      const searchInput = document.getElementById('searchInput');
+
+      searchForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const searchTerm = normalizeString(searchInput.value.trim());
+
+        // Restablecer visibilidad de todos los cards y ocultar botón "Mostrar más"
+        cards.forEach((card) => {
+          card.style.display = 'none';
+        });
+        mostrarMasBtn.style.display = 'none';
+
+        // Filtrar por coincidencia en el título
+        let found = 0;
+        cards.forEach((card) => {
+          let title = card.querySelector('h3').textContent;
+          if(normalizeString(title).includes(searchTerm)) {
+            card.style.display = 'block';
+            found++;
+          }
+        });
+        
+        // Mostrar encabezado de resultados
+        if(found > 0){
+          searchResultsHeader.textContent = Resultados de la búsqueda "${searchInput.value.trim()}"...;
+        } else {
+          searchResultsHeader.textContent = No se encontró ningún resultado para "${searchInput.value.trim()}"...;
+        }
+      });
+
+      // Lógica para desplegar/ocultar la barra lateral
+      const toggleBtn = document.getElementById('toggleSidebarBtn');
+      const sidebar = document.getElementById('sidebar');
+      const main = document.querySelector('main');
+
+      toggleBtn.addEventListener('click', function() {
+        // Alternar visibilidad del sidebar
+        if(sidebar.style.display === 'none' || sidebar.classList.contains('hidden')){
+          sidebar.style.display = 'block';
+          sidebar.classList.remove('hidden');
+          // Ajustar margen izquierdo del main
+          main.style.marginLeft = '320px';
+        } else {
+          sidebar.style.display = 'none';
+          sidebar.classList.add('hidden');
+          main.style.marginLeft = '0';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

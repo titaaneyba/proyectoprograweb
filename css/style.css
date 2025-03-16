@@ -1,0 +1,458 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colores y fondo */
+body {
+  background-color: #121212; /* Negro noche */
+  color: #f1f1f1;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Encabezado con fondo en tono café roble */
+header {
+  background: #2C1B0F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-bottom: 1px solid #333;
+}
+
+/* Compensación por header fijo */
+body > header + aside,
+body > header + main,
+body > header + footer {
+  margin-top: 80px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.hogwarts-logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #f1f1f1;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.house-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* Estilos para el buscador en la barra superior */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.search-form input[type="text"] {
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background: #2C1B0F;
+  color: #f1f1f1;
+}
+
+.search-form button {
+  margin-left: 5px;
+}
+
+/* Botón para desplegar/ocultar la barra lateral */
+.toggle-sidebar {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Para empujarlo a la izquierda */
+}
+
+#toggleSidebarBtn {
+  background: transparent;
+  border: none;
+  color: #000; /* Texto negro */
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.bars-container {
+  display: flex;
+  flex-direction: column; /* Apilar barras verticalmente */
+  align-items: center;
+  margin-right: 8px;
+}
+
+#toggleSidebarBtn .bar {
+  display: block;
+  width: 25px;
+  height: 4px; /* gruesas */
+  background: #000; /* negro */
+  margin: 4px 0;
+}
+
+.info-text {
+  color: #000; /* Negro */
+}
+
+/* Barra lateral: fondo #2c1b0f, borde color madera oscuro */
+#sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  width: 320px; 
+  background: #2c1b0f; /* Color de fondo del sidebar */
+  padding: 0 20px 20px 20px;
+  border-right: 5px solid #3A1F0B; /* Borde madera oscuro */
+  overflow-y: auto;
+}
+
+/* Oculto cuando se hace click en "Mas info" */
+#sidebar.hidden {
+  display: none;
+}
+
+/* Título "Nosotros" con color rojo oscuro (#8B0000) */
+.sidebar-header {
+  background: #2c1b0f; /* mismo color del sidebar */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.sidebar-header h2 {
+  font-family: 'UnifrakturMaguntia', cursive; /* Letra medieval exagerada */
+  font-size: 1.8rem;
+  color: #8B0000; /* rojo oscuro */
+  margin: 0;
+}
+
+/* Secciones del sidebar */
+.sidebar-section {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-family: 'MedievalSharp', serif; /* Letra medieval */
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3A1F0B; /* Borde oscuro */
+  padding-bottom: 5px;
+  color: #9A4C10; /* café tipo óxido, más claro que #3A1F0B */
+}
+
+.sidebar-section p {
+  margin-top: 10px;
+}
+
+/* Estilos para indicadores: cada item encuadrado y centrado */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.stats-item {
+  border: 1px solid #9A4C10; /* borde color óxido */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 90px;
+}
+
+/* Margen extra para el mapa */
+.map-container {
+  margin-top: 15px;
+}
+
+/* Contenido principal */
+main {
+  margin-left: 320px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Sección Hero con imagen de fondo difuminada */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("https://th.bing.com/th/id/R.471019acc07c92f61f26f3e1c3debc89?rik=Jmxi9qBC545%2fPQ&pid=ImgRaw&r=0") no-repeat center center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Botón de acción */
+.btn {
+  background: #444;
+  color: #f1f1f1;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #666;
+}
+
+/* Secciones generales */
+section {
+  padding: 60px 0;
+}
+
+/* Galería de instalaciones: imágenes uniformes */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.gallery-item figcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Enlace resaltado */
+.link-resaltar {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* Sección de Libros */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.book-card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.book-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Contenedor del botón "Mostrar más" */
+.mostrar-mas-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Encabezado de resultados de búsqueda */
+.search-results-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-family: 'MedievalSharp', serif;
+  color: #9A4C10; /* mismo tono óxido */
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #222;
+  color: #f1f1f1;
+}
+
+/* Sección "Contáctanos" */
+#contacto p {
+  margin-bottom: 15px;
+}
+
+/* Pie de página: contenido centrado */
+footer {
+  background: #2C1B0F;
+  text-align: center; /* Contenido centrado */
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #sidebar {
+    position: relative;
+    width: 100%;
+    border-right: none;
+    margin-bottom: 20px;
+  }
+  main {
+    margin-left: 0;
+  }
+  header, footer {
+    text-align: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Botón para desplegar/ocultar la barra lateral */
+.toggle-sidebar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 1cm; /* Mueve el botón 1 cm desde el margen izquierdo */
+}
+
+/* Modificación: Alinear el botón "Más info" a la izquierda */
+#toggleSidebarBtn {
+  background: transparent;
+  border: none;
+  color: #f1f1f1; /* Texto blanco */
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.bars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-right: 8px;
+}
+
+#toggleSidebarBtn .bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: #f1f1f1 !important; 
+  margin: 4px 0;
+}
+
+.info-text {
+  color: #f1f1f1 !important; 
+  text-align: left !important; 
+  margin-left: 8px;
+}
+/* Ajuste de la barra lateral para eliminar el espacio con la barra superior */
+#sidebar {
+  position: fixed;
+  top: 0; /* Antes era 80px, ahora inicia desde arriba */
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  background: #2c1b0f;
+  padding: 80px 20px 20px 20px; /* Se mantiene un padding en la parte superior para evitar que el contenido choque con el header */
+  border-right: 5px solid #3A1F0B;
+  overflow-y: auto;
+}
+/* Ajuste de la barra lateral */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  background: #2c1b0f;
+  padding: 60px 20px 20px 20px; /* Reducimos el padding superior de 80px a 60px */
+  border-right: 5px solid #3A1F0B;
+  overflow-y: auto;
+}
+
